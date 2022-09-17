@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
