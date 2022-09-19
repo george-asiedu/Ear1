@@ -24,6 +24,7 @@ a {
     height: auto;
     background-color: #029C56;
     color: #fff;
+    margin-bottom: 0;
 }
 
 .wrapper {
@@ -59,7 +60,7 @@ a {
     font-size: 70px;
     line-height: 0.9;
     font-weight: 600;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -83,4 +84,37 @@ a {
 .store img {
     width: 40%;
     height: auto;
+}
+
+.phone-image {
+    /* background-color: #fff; */
+    position: relative;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-image img {
+    position: inherit;
+    width: 57%;
+    height: auto;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-left: 30px;
+}
+
+.phone-image .first {
+    margin-right: -570px;
+}
+
+.phone-image .second {
+    z-index: 99;
+}
+
+.phone-image .third {
+    margin-left: -470px;
 }
