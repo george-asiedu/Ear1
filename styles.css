@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
@@ -9,6 +14,7 @@
 }
 
 body {
+    width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     background-color: #fff;
@@ -25,9 +31,7 @@ a {
 }
 
 section {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    width: 100%;
 }
 
 .container-1 {
@@ -45,7 +49,7 @@ section {
     margin: auto;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 .logo-image img{
@@ -55,9 +59,9 @@ section {
 
 .navigate a{
     color: #fff;
-    padding: 0 16px;
+    padding: 0 1rem;
     text-align: center;
-    font-size: 16px;
+    font-size: 1.125rem;
 }
 
 .theme {
@@ -69,27 +73,27 @@ section {
 }
 
 .theme h1 {
-    font-size: 70px;
+    font-size: 4.5rem;
     line-height: 1.1;
     font-weight: 600;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 3.125rem;
+    margin-bottom: 1.0rem;
     text-align: center;
 }
 
 .theme p {
-    font-size: 13px;
+    font-size: 0.85rem;
     color: #FFFFFF;
     opacity: 0.6;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 3.00rem;
 }
 
 .store {
     position: relative;
     width: 40%;
     margin: auto;
-    display: inline-flex;
+    display: inline-block;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -97,38 +101,52 @@ section {
 .store img {
     width: 40%;
     height: auto;
+    margin-bottom: 1.25rem;
+}
+
+.store .google-store {
+    margin-right: 1.875rem;
 }
 
 .phone-image {
+    display: block;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-image-items {
+    display: inline-block;
     position: relative;
-    width: 90%;
+    width: 100%;
     margin: auto;
-    align-items: center;
-    justify-content: center;
 }
 
-.phone-image img {
-    position: inherit;
-    width: 57%;
+.phone-image-items img {
+    position: relative;
+    max-width: 100%;
     height: auto;
-    display: inline-flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
     margin: auto;
-    margin-left: 30px;
+    top: 4px;
+    right: 30px;
 }
 
-.phone-image .first {
-    margin-right: -600px;
+.phone-image-items img:nth-child(1) {
+    position: relative;
+    width: 29.5%;
+    left: 20.1rem;
 }
 
-.phone-image .second {
-    z-index: 99;
+.phone-image-items img:nth-child(2) {
+    position: relative;
+    width: 40%;
+    z-index: 10;
 }
 
-.phone-image .third {
-    margin-left: -470px;
+.phone-image-items img:nth-child(3) {
+    position: relative;
+    width: 29.5%;
+    left: -19.1rem;
 }
 
 .container-2 {
@@ -297,11 +315,12 @@ section {
 }
 
 .fan-chatroom div:nth-child(4) {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .fan-chatroom div:nth-child(5) {
-    bottom: 0;
+    position: relative;
+    top: 7px;
 }
 
 .container-3 {
@@ -326,8 +345,10 @@ section {
 }
 
 .settlement-image img {
+    position: relative;
     max-width: 100%;
     width: 70%;
+    top: 5px;
 }
 
 .influencer-income {
@@ -336,17 +357,17 @@ section {
     text-align: justify;
     align-items: center;
     justify-content: center;
-    padding-top: 180px;
+    padding-top: 150px;
     padding-left: 30px;
 }
 
 .influencer-btn {
     background-color: #FF8C62;
-    width: 100px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    border-radius: 15px;
+    width: 110px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    border-radius: 20px;
     font-weight: 600;
     cursor: pointer;
     color: #000000;
@@ -397,6 +418,7 @@ section {
 
 .client-profile {
     display: block;
+    position: relative;
     background: #363636;
     margin-top: 130px;
     border-radius: 15px 15px 8px 8px;
@@ -407,7 +429,7 @@ section {
 
 .profile-cover {
     display: flex;
-    position: inherit;
+    position: relative;
     padding: 50px 40px 40px 0px;
     justify-content: space-evenly;
 }
@@ -430,7 +452,7 @@ section {
 }
 
 .response {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     padding-left: 85px;
     padding-bottom: 70px;
@@ -461,7 +483,7 @@ section {
 }
 
 .influencer-details {
-    position: inherit;
+    position: relative;
     display: block;
     width: 70%;
     margin: auto;
@@ -496,7 +518,6 @@ section {
 
 .container-4 {
     display: block;
-    position: inherit;
     background-color: #ffffff;
     color: #121212;
     width: 100%;
@@ -517,7 +538,7 @@ section {
     position: relative;
     display: flex;
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     justify-content: space-between;
     padding-left: 75px;
 }
@@ -547,7 +568,7 @@ section {
 }
 
 .box2 {
-    position: inherit;
+    position: relative;
     display: block;
     width: 50%;
     height: auto;
@@ -624,17 +645,21 @@ hr {
 }
 
 .footer {
-    display: flex;
+    position: relative;
+    display: inline-flex;
     width: 100%;
     height: 500px;
-    background-color: #fff;
-    justify-content: space-evenly;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
 }
 
 .socials {
+    position: relative;
     display: block;
     width: 20%;
-    margin-top: 15%;
+    left: 30px;
+    align-self: center;
+    justify-content: center;
 }
 
 .socials .footer-logo {
@@ -643,21 +668,22 @@ hr {
 
 .socials-img {
     display: inline-flex;
-    justify-content: space-between;
 }
 
 .socials-img div:nth-child(1) {
-    padding-right: 25px;
+    margin-right: 5px;
 }
 
 .socials-img div:nth-child(2) {
-    padding-right: 25px;
+    margin-right: 5px;
 }
 
 .footer-connect {
+    position: relative;
     display: block;
     max-width: fit-content;
     width: 80%;
+    left: -100px;
     margin-top: 70px;
 }
 
@@ -685,7 +711,7 @@ hr {
     padding-left: 10px;
     border-radius: 5px 0px 0px 5px;
     border: 2px solid #f0dfdf;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .footer-header input[type="submit"] {
@@ -739,10 +765,487 @@ hr {
     margin-top: -105px;
 }
 
-/* Tablet media queries */
-@media (max-width: 768px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
     section {
+        width: 100%;
+        height: auto;
+    }
+
+    .wrapper {
+        padding: 0.625rem;
+    }
+
+    .logo-image img {
+        width: 50%;
+        padding-top: 0.5rem;
+    }
+
+    .navigate a {
+        padding: 0 0.1rem;
+        font-size: 0.625rem;
+    }
+
+    .theme h1 {
+        font-size: 3.0rem;
+        padding-top: 0;
+        margin-bottom: 0.625rem;
+        margin-top: 20px;
+        line-height: 1.1;
+    }
+
+    .theme p {
+        font-size: 0.65rem;
+        margin-bottom: 25px;
+    }
+
+    .store {
+        width: 80%;
+    }
+
+    .phone-image {
+        width: 100%;
+    }
+
+    .phone-image-items {
+        width: 100%;
+        margin: auto;
+        left: 25px;
+    }
+
+    .phone-image-items img {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .phone-image-items img:nth-child(1) {
+        position: relative;
+        width: 32.5%;
+        left: 5.4rem;
+    }
+
+    .phone-image-items img:nth-child(2) {
+        position: relative;
+        width: 32.5%;
+    }
+
+    .phone-image-items img:nth-child(3) {
+        position: relative;
+        width: 32.5%;
+        left: -7.95rem;
+    }
+
+    .first-box {
+        background-size: 15%, 30%;
+        padding-top: 80px;
+        padding-bottom: 20px;
+        padding-left: 35px;
+        padding-right: 35px;
+        line-height: 1.0;
+    }
+
+    .first-box h2 {
+        font-size: 30px;
+    }
+
+    .first-box p {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .second-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .fans-connect {
+        position: relative;
+        width: 56%;
+        top: 50px;
+        left: 35px;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+
+    .fans-btn {
+        font-size: 13px;
+        padding: 5px 20px;
+    }
+
+    .fans-connect h2 {
+        font-size: 23px;
+        margin-top: -12px;
+    }
+
+    .fans-connect p {
+        font-size: 10px;
+        margin-top: -7px;
+    }
+
+    .fans-image {
+        width: 44%;
+    }
+
+    .fans-image img {
+        width: 65%;
+        margin-top: -5px;
+        margin-left: 50px;
+    }
+
+    .fan-reply {
+        position: relative;
+        width: 50%;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        padding-left: 35px;
+        padding-right: 15px;
+    }
+
+    .fan-header {
+        position: relative;
+        display: inline-flex;
+        top: 10px;
+    }
+
+    .fan-header .fans-btn {
+        font-size: 10px;
+        padding: 5px 15px;
+    }
+
+    .fan-header .chat-icon {
+        width: 80%;
+        margin-top: -25px;
+        margin-left: 70px;
+    }
+
+    .chat-icon img {
+        width: 60%;
+    }
+
+    .fan-reply h1 {
+        font-size: 22px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    .fan-reply p {
+        font-size: 0.43725rem;
+        line-height: 1.5;
+        margin-top: 0px;
+    }
+
+    .fan-chatroom {
+        position: relative;
+        width: 50%;
+        padding: 0 30px;
+        line-height: 1.2;
+    }
+
+    .fan-chatroom div:nth-child(1) {
+        margin-bottom: 10px;
+    }
+
+    .fan-chatroom div:nth-child(2) {
         max-width: 100%;
+        width: 75%;
+        margin-bottom: 7px;
+    } 
+
+    .fan-chatroom div:nth-child(3) {
+        max-width: 100%;
+        width: 50%;
+        margin-bottom: 5px;
+    }
+
+    .fan-chatroom div:nth-child(4) {
+        max-width: 100%;
+        width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .fan-chatroom div:nth-child(5) {
+        position: relative;
+        top: 5px;
+    }
+
+    .settlement-image {
+        width: 45%;
+        padding-left: 40px;
+        padding-top: 25px;
+    }
+
+    .settlement-image img {
+        position: relative;
+        display: block;
+        width: 85%;
+        top: 23px;
+    }
+
+    .influencer-income {
+        position: relative;
+        width: 55%;
+        padding-top: 60px;
+        padding-left: 10px;
+    }
+
+    .influencer-btn {
+        font-weight: 450;
+        font-size: 9px;
+        width: 60px;
+        margin-bottom: 15px;
+    }
+
+    .influencer-income h1 {
+        font-size: 27px;
+        line-height: 1.09;
+        margin-bottom: 8px;
+    }
+
+    .influencer-income p {
+        font-size: 9px;
+        margin-bottom: 20px;
+    }
+
+    .profile-box {
+        width: 90%;
+        margin-bottom: 50px;
+    }
+
+    .client-profile {
+        margin-top: 100px;
+    }
+
+    .profile-cover {
+        padding: 30px 5px 0px 7px;
+        margin-bottom: 20px;
+    }
+
+    .profile-cover img {
+        max-width: 100%;
+        width: 15%;
+        height: 20px;
+    }
+
+    .profile-cover h5 {
+        font-size: 7px;
+        margin-left: 5px;
+        margin-top: 0px;
+    }
+
+    .response {
+        padding-left: 10px;
+        padding-bottom: 40px;
+    }
+
+    .decline-btn, .accept-btn {
+        font-size: 10px;
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+
+    .accept-btn {
+        margin-left: 10px;
+    }
+
+    .influencer-details {
+        width: 87%;
+    }
+
+    .filter-buttons {
+        margin-top: 90px;
+        margin-bottom: 10px;
+    }
+
+    .filter-icon img {
+        position: relative;
+        width: 45%;
+        left: 30px;
+    }
+
+    .influencer-details h2{
+        font-size: 25px;
+        line-height: 1.2;
+        margin-top: -10px;
+    }
+
+    .influencer-details p {
+        font-size: 8px;
+        line-height: 1.4;
+        margin-top: -10px;
+    }
+
+    .container-4 header {
+        font-size: 35px;
+        margin-left: 30px;
+        padding: 45px 0px;
+    }
+
+    .services {
+        width: 100%;
+        padding-left: 50px;
+    }
+
+    .box1 {
+        width: 45%;
+    }
+
+    .check label{
+        font-size: 14px;
+        padding-left: 5px;
+    }
+
+    .check p {
+        padding-left: 23px;
+        padding-top: 4px;
+        padding-bottom: 30px;
+        font-size: 7px;
+    }
+
+    .box2 {
+        width: 55%;
+    }
+
+    .box2 img {
+        margin-top: -40px;
+        width: 100%;
+        margin-left: -25px;
+    }
+
+    .ahead {
+        width: 90%;
+        margin-top: -86px;
+        height: 200px;
+        margin-bottom: 35px;
+        border-radius: 50px;
+    }
+
+    .hand-image {
+        width: 30%;
+        position: relative;
+        top: -12px;
+        left: 115px;
+    }
+
+    .ahead-details {
+        width: 60%;
+        margin-left: 125px;
+    }
+
+    .ahead-text h1 {
+        font-size: 22px;
+        line-height: 1.1;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+
+    .ahead-text p {
+        font-size: 9px;
+        margin-bottom: 15px;
+    }
+
+    .ahead-store {
+        width: 60%;
+    }
+
+    .ahead-store img {
+        width: 60%;
+    }
+
+    .ahead-store .apple {
+        margin-left: 20px;
+    }
+
+    .footer {
+        width: 100%;
+        height: 380px;
+    }
+
+    .socials {
+        position: relative;
+        display: block;
+        align-self: center;
+        justify-content: center;
+        width: 15%;  
+        left: 8px;     
+    }
+
+    .socials .footer-logo {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .socials-img {
+        position: relative;
+        display: inline-flex;
+    }
+
+    .socials-img div:nth-child(1) {
+        width: 100%;        
+    }
+
+    .socials-img div:nth-child(2) {
+        width: 100%;
+    }
+
+    .socials-img div:nth-child(3) {
+        width: 100%;
+    }
+
+    .footer-connect {
+        position: relative;
+        width: 85%;
+        margin-top: 40px;
+        left: -15px;
+    }
+
+    .footer-header h5 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .footer-header input[type="email"] {
+        width: 83%;
+        height: 30px;
+        padding-left: 5px;
+    }
+
+    .footer-header input[type="submit"] {
+        height: 30px;
+        font-size: 10px;
+        width: 17%;        
+    }
+
+    .connect h4 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .connect h6 {
+        font-size: 10px;
+        line-height: 3.0;
+    }
+
+    .connect .help {
+        margin-top: -33px;
+    }
+
+    .connect .download {
+        margin-top: -66px;
+    }
+
+    .connect .resources {
+        margin-top: -66px;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) { 
+    section {
+        width: 100%;
         height: auto;
         display: block;
     }
@@ -760,7 +1263,7 @@ hr {
 
     .store img{
         max-width: 100%;
-        width: 80%;
+        width: 50%;
         position: relative;
         display: inline-flex;
         align-items: center;
@@ -783,7 +1286,7 @@ hr {
 
     .phone-image img {
         position: relative;
-        width: 70%;
+        width: 50%;
         display: inline-flex;        
     }
 
@@ -1060,14 +1563,13 @@ hr {
 
     .box2 img {
         width: 100%;
-        height: 100vh;
         margin-top: -60px;
         margin-left: -60px;
     }
 
     .ahead {
         width: 80%;
-        margin-top: -138px;
+        margin-top: -150px;
         margin-left: 110px;
         height: 317px;
     }
@@ -1131,4 +1633,14 @@ hr {
     .footer-header h5 {
         font-size: 17px;
     }
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
 }
